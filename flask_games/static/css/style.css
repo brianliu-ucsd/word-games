@@ -4,3 +4,7 @@ h1 {
     text-align: center;
     padding: 10px;
 }
+
+div.container {
+    font-size: 100px;
+}

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Word Games</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a class="navbar-brand" href="{{ url_for('index')}}">Word Games</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+    <form method="post" action="{{ url_for('operation_result') }}" id="calculator-form">
+        <label for="A1"></label>
+        <input type="text" name="A1" pattern="[A-Za-z]" id="A1">
+        <label for="A2"></label>
+        <input type="text" name="A2" pattern="[A-Za-z]" id="A2">
+        <label for="A3"></label>
+        <input type="text" name="A3" pattern="[A-Za-z]" id="A3">
+        <label for="A4"></label>
+        <input type="text" name="A4" pattern="[A-Za-z]" id="A4">
+        <br />
+
+        <label for="B1"></label>
+        <input type="text" name="B1" pattern="[A-Za-z]" id="B1">
+        <label for="B2"></label>
+        <input type="text" name="B2" pattern="[A-Za-z]" id="B2">
+        <label for="B3"></label>
+        <input type="text" name="B3" pattern="[A-Za-z]" id="B3">
+        <label for="B4"></label>
+        <input type="text" name="B4" pattern="[A-Za-z]" id="B4">
+        <br />
+
+        <label for="C1"></label>
+        <input type="text" name="C1" pattern="[A-Za-z]" id="C1">
+        <label for="C2"></label>
+        <input type="text" name="C2" pattern="[A-Za-z]" id="C2">
+        <label for="C3"></label>
+        <input type="text" name="C3" pattern="[A-Za-z]" id="C3">
+        <label for="C4"></label>
+        <input type="text" name="C4" pattern="[A-Za-z]" id="C4">
+        <br />
+
+        <label for="D1"></label>
+        <input type="text" name="D1" pattern="[A-Za-z]" id="D1">
+        <label for="D2"></label>
+        <input type="text" name="D2" pattern="[A-Za-z]" id="D2">
+        <label for="D3"></label>
+        <input type="text" name="D3" pattern="[A-Za-z]" id="D3">
+        <label for="D4"></label>
+        <input type="text" name="D4" pattern="[A-Za-z]" id="D4">
+        <br />
+
+        <input type="submit" value="Submit"/>
+        <input type="reset" value="RESET" style="color: red;"/>
+    </form>
+    </div>
+  </body>
+</html>
