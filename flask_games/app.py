@@ -26,15 +26,7 @@ def operation_result():
     D3 = request.form['D3']
     D4 = request.form['D4']
     
-    # create Board
-
     board = [[A1, A2, A3, A4], [B1, B2, B3, B4], [C1, C2, C3, C4], [D1, D2, D3, D4]]
 
     result = [x for x in sorted(set(solve(board)), key=len, reverse=True)]
     return result
-
-    # create static Trie (can be used across all games, using same set of words from dictionary.json)
-    # first create Trie
-    # then run dictionary through Trie so it is stored and doesn't have to be set up each time
-
-    # DFS through actual board
