@@ -7,17 +7,19 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
 
     <title>Word Games</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <nav class="d-flex justify-content-center navbar navbar-expand-md navbar-light bg-light">
         <a class="navbar-brand" href="{{ url_for('index')}}">Word Games</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
     </nav>
-    <form method="post" action="{{ url_for('operation_result') }}" id="calculator-form">
+    <div class="form-div d-flex justify-content-center">
+      <form method="post" action="{{ url_for('operation_result') }}" id="calculator-form">
         <label for="A1"></label>
         <input type="text" name="A1" pattern="[A-Za-z]" id="A1">
         <label for="A2"></label>
@@ -58,9 +60,11 @@
         <input type="text" name="D4" pattern="[A-Za-z]" id="D4">
         <br />
 
-        <input type="submit" value="Submit"/>
-        <input type="reset" value="RESET" style="color: red;"/>
-    </form>
+        <div class="button-div d-flex justify-content-center">
+          <input type="submit" value="Submit"/>
+          <input type="reset" value="RESET" style="color: red;"/>
+        </div>
+      </form>
     </div>
   </body>
 </html>
