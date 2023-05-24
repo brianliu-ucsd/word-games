@@ -10,54 +10,62 @@
     <link rel="stylesheet" type="text/css" href="static/css/style.css">
 
     <title>Word Games</title>
+
+    <script>
+      function autotab(current, to) {
+        if (current.getAttribute && current.value.length == current.getAttribute("maxlength")) {
+          to.focus()
+        }
+      }
+    </script>
   </head>
   <body>
-    <nav class="d-flex justify-content-center navbar navbar-expand-md navbar-light bg-light">
+    <nav class="d-flex justify-content-center navbar navbar-expand-md navbar-light">
         <a class="navbar-brand" href="{{ url_for('index')}}">Word Games</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
     </nav>
     <div class="form-div d-flex justify-content-center">
-      <form method="post" action="{{ url_for('operation_result') }}" id="calculator-form">
+      <form method="post" action="{{ url_for('operation_result') }}" id="calculator-form" name="form">
         <label for="A1"></label>
-        <input type="text" name="A1" pattern="[A-Za-z]" id="A1">
+        <input type="text" name="A1" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="A1" oninput="autotab(this, document.form.A2)">
         <label for="A2"></label>
-        <input type="text" name="A2" pattern="[A-Za-z]" id="A2">
+        <input type="text" name="A2" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="A2" oninput="autotab(this, document.form.A3)">
         <label for="A3"></label>
-        <input type="text" name="A3" pattern="[A-Za-z]" id="A3">
+        <input type="text" name="A3" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="A3" oninput="autotab(this, document.form.A4)">
         <label for="A4"></label>
-        <input type="text" name="A4" pattern="[A-Za-z]" id="A4">
+        <input type="text" name="A4" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="A4" oninput="autotab(this, document.form.B1)">
         <br />
 
         <label for="B1"></label>
-        <input type="text" name="B1" pattern="[A-Za-z]" id="B1">
+        <input type="text" name="B1" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="B1" oninput="autotab(this, document.form.B2)">
         <label for="B2"></label>
-        <input type="text" name="B2" pattern="[A-Za-z]" id="B2">
+        <input type="text" name="B2" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="B2" oninput="autotab(this, document.form.B3)">
         <label for="B3"></label>
-        <input type="text" name="B3" pattern="[A-Za-z]" id="B3">
+        <input type="text" name="B3" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="B3" oninput="autotab(this, document.form.B4)">
         <label for="B4"></label>
-        <input type="text" name="B4" pattern="[A-Za-z]" id="B4">
+        <input type="text" name="B4" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="B4" oninput="autotab(this, document.form.C1)">
         <br />
 
         <label for="C1"></label>
-        <input type="text" name="C1" pattern="[A-Za-z]" id="C1">
+        <input type="text" name="C1" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="C1" oninput="autotab(this, document.form.C2)">
         <label for="C2"></label>
-        <input type="text" name="C2" pattern="[A-Za-z]" id="C2">
+        <input type="text" name="C2" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="C2" oninput="autotab(this, document.form.C3)">
         <label for="C3"></label>
-        <input type="text" name="C3" pattern="[A-Za-z]" id="C3">
+        <input type="text" name="C3" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="C3" oninput="autotab(this, document.form.C4)">
         <label for="C4"></label>
-        <input type="text" name="C4" pattern="[A-Za-z]" id="C4">
+        <input type="text" name="C4" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="C4" oninput="autotab(this, document.form.D1)">
         <br />
 
         <label for="D1"></label>
-        <input type="text" name="D1" pattern="[A-Za-z]" id="D1">
+        <input type="text" name="D1" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="D1" oninput="autotab(this, document.form.D2)">
         <label for="D2"></label>
-        <input type="text" name="D2" pattern="[A-Za-z]" id="D2">
+        <input type="text" name="D2" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="D2" oninput="autotab(this, document.form.D3)">
         <label for="D3"></label>
-        <input type="text" name="D3" pattern="[A-Za-z]" id="D3">
+        <input type="text" name="D3" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="D3" oninput="autotab(this, document.form.D4)">
         <label for="D4"></label>
-        <input type="text" name="D4" pattern="[A-Za-z]" id="D4">
+        <input type="text" name="D4" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="D4">
         <br />
 
         <div class="button-div d-flex justify-content-center">

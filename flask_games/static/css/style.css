@@ -2,14 +2,15 @@
     gap: 30px;
 }
 
-a {
-    color:aqua;
-}
-
-nav {
+.navbar {
     margin-bottom: 20px;
+    background-color: lightgray;
 }
 
 .button-div {
     margin-top: 20px;
+}
+
+input {
+    margin-bottom: 5px;
 }
