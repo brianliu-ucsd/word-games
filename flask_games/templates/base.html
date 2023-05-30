@@ -17,6 +17,12 @@
           to.focus()
         }
       }
+
+      function handleBackspace(event, current, to) {
+        if (event.keyCode === 8 && event.target.value == '') {
+          to.focus()
+        }
+      }
     </script>
   </head>
   <body>
@@ -31,41 +37,41 @@
         <label for="A1"></label>
         <input type="text" name="A1" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="A1" oninput="autotab(this, document.form.A2)">
         <label for="A2"></label>
-        <input type="text" name="A2" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="A2" oninput="autotab(this, document.form.A3)">
+        <input type="text" name="A2" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="A2" oninput="autotab(this, document.form.A3)" onkeydown="handleBackspace(event, this, document.form.A1)">
         <label for="A3"></label>
-        <input type="text" name="A3" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="A3" oninput="autotab(this, document.form.A4)">
+        <input type="text" name="A3" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="A3" oninput="autotab(this, document.form.A4)" onkeydown="handleBackspace(event, this, document.form.A2)">
         <label for="A4"></label>
-        <input type="text" name="A4" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="A4" oninput="autotab(this, document.form.B1)">
+        <input type="text" name="A4" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="A4" oninput="autotab(this, document.form.B1)" onkeydown="handleBackspace(event, this, document.form.A3)">
         <br />
 
         <label for="B1"></label>
-        <input type="text" name="B1" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="B1" oninput="autotab(this, document.form.B2)">
+        <input type="text" name="B1" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="B1" oninput="autotab(this, document.form.B2)" onkeydown="handleBackspace(event, this, document.form.A4)">
         <label for="B2"></label>
-        <input type="text" name="B2" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="B2" oninput="autotab(this, document.form.B3)">
+        <input type="text" name="B2" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="B2" oninput="autotab(this, document.form.B3)" onkeydown="handleBackspace(event, this, document.form.B1)">
         <label for="B3"></label>
-        <input type="text" name="B3" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="B3" oninput="autotab(this, document.form.B4)">
+        <input type="text" name="B3" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="B3" oninput="autotab(this, document.form.B4)" onkeydown="handleBackspace(event, this, document.form.B2)">
         <label for="B4"></label>
-        <input type="text" name="B4" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="B4" oninput="autotab(this, document.form.C1)">
+        <input type="text" name="B4" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="B4" oninput="autotab(this, document.form.C1)" onkeydown="handleBackspace(event, this, document.form.B3)">
         <br />
 
         <label for="C1"></label>
-        <input type="text" name="C1" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="C1" oninput="autotab(this, document.form.C2)">
+        <input type="text" name="C1" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="C1" oninput="autotab(this, document.form.C2)" onkeydown="handleBackspace(event, this, document.form.B4)">
         <label for="C2"></label>
-        <input type="text" name="C2" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="C2" oninput="autotab(this, document.form.C3)">
+        <input type="text" name="C2" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="C2" oninput="autotab(this, document.form.C3)" onkeydown="handleBackspace(event, this, document.form.C1)">
         <label for="C3"></label>
-        <input type="text" name="C3" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="C3" oninput="autotab(this, document.form.C4)">
+        <input type="text" name="C3" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="C3" oninput="autotab(this, document.form.C4)" onkeydown="handleBackspace(event, this, document.form.C2)">
         <label for="C4"></label>
-        <input type="text" name="C4" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="C4" oninput="autotab(this, document.form.D1)">
+        <input type="text" name="C4" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="C4" oninput="autotab(this, document.form.D1)" onkeydown="handleBackspace(event, this, document.form.C3)">
         <br />
 
         <label for="D1"></label>
-        <input type="text" name="D1" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="D1" oninput="autotab(this, document.form.D2)">
+        <input type="text" name="D1" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="D1" oninput="autotab(this, document.form.D2)" onkeydown="handleBackspace(event, this, document.form.C4)">
         <label for="D2"></label>
-        <input type="text" name="D2" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="D2" oninput="autotab(this, document.form.D3)">
+        <input type="text" name="D2" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="D2" oninput="autotab(this, document.form.D3)" onkeydown="handleBackspace(event, this, document.form.D1)">
         <label for="D3"></label>
-        <input type="text" name="D3" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="D3" oninput="autotab(this, document.form.D4)">
+        <input type="text" name="D3" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="D3" oninput="autotab(this, document.form.D4)" onkeydown="handleBackspace(event, this, document.form.D2)">
         <label for="D4"></label>
-        <input type="text" name="D4" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="D4">
+        <input type="text" name="D4" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="D4" onkeydown="handleBackspace(event, this, document.form.D3)">
         <br />
 
         <div class="button-div d-flex justify-content-center">
