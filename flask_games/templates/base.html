@@ -7,7 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/../static/css/style.css">
 
     <title>Word Games</title>
 
@@ -23,62 +23,69 @@
           to.focus()
         }
       }
+
     </script>
   </head>
   <body>
     <nav class="d-flex justify-content-center navbar navbar-expand-md navbar-light">
-        <a class="navbar-brand" href="{{ url_for('index')}}">Word Games</a>
+        <a class="navbar-brand custom-brand" href="{{ url_for('index')}}">Word Games</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
     </nav>
+    <div class="stripe"></div>
     <div class="form-div d-flex justify-content-center">
       <form method="post" action="{{ url_for('operation_result') }}" id="calculator-form" name="form">
         <label for="A1"></label>
-        <input type="text" name="A1" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="A1" oninput="autotab(this, document.form.A2)">
+        <input class="form" type="text" name="A1" maxlength="1" size="1" pattern="[A-Za-z]+" style="font-size: 25px; text-transform:uppercase;" required="required" autocomplete="off" id="A1" oninput="autotab(this, document.form.A2)">
         <label for="A2"></label>
-        <input type="text" name="A2" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="A2" oninput="autotab(this, document.form.A3)" onkeydown="handleBackspace(event, this, document.form.A1)">
+        <input class="form" type="text" name="A2" maxlength="1" size="1" pattern="[A-Za-z]" style="font-size: 25px; text-transform:uppercase;" required="required" autocomplete="off" id="A2" oninput="autotab(this, document.form.A3)" onkeydown="handleBackspace(event, this, document.form.A1)">
         <label for="A3"></label>
-        <input type="text" name="A3" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="A3" oninput="autotab(this, document.form.A4)" onkeydown="handleBackspace(event, this, document.form.A2)">
+        <input class="form" type="text" name="A3" maxlength="1" size="1" pattern="[A-Za-z]" style="font-size: 25px; text-transform:uppercase;" required="required" autocomplete="off" id="A3" oninput="autotab(this, document.form.A4)" onkeydown="handleBackspace(event, this, document.form.A2)">
         <label for="A4"></label>
-        <input type="text" name="A4" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="A4" oninput="autotab(this, document.form.B1)" onkeydown="handleBackspace(event, this, document.form.A3)">
+        <input class="form" type="text" name="A4" maxlength="1" size="1" pattern="[A-Za-z]" style="font-size: 25px; text-transform:uppercase;" required="required" autocomplete="off" id="A4" oninput="autotab(this, document.form.B1)" onkeydown="handleBackspace(event, this, document.form.A3)">
         <br />
 
         <label for="B1"></label>
-        <input type="text" name="B1" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="B1" oninput="autotab(this, document.form.B2)" onkeydown="handleBackspace(event, this, document.form.A4)">
+        <input class="form" type="text" name="B1" maxlength="1" size="1" pattern="[A-Za-z]" style="font-size: 25px; text-transform:uppercase;" required="required" autocomplete="off" id="B1" oninput="autotab(this, document.form.B2)" onkeydown="handleBackspace(event, this, document.form.A4)">
         <label for="B2"></label>
-        <input type="text" name="B2" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="B2" oninput="autotab(this, document.form.B3)" onkeydown="handleBackspace(event, this, document.form.B1)">
+        <input class="form" type="text" name="B2" maxlength="1" size="1" pattern="[A-Za-z]" style="font-size: 25px; text-transform:uppercase;" required="required" autocomplete="off" id="B2" oninput="autotab(this, document.form.B3)" onkeydown="handleBackspace(event, this, document.form.B1)">
         <label for="B3"></label>
-        <input type="text" name="B3" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="B3" oninput="autotab(this, document.form.B4)" onkeydown="handleBackspace(event, this, document.form.B2)">
+        <input class="form" type="text" name="B3" maxlength="1" size="1" pattern="[A-Za-z]" style="font-size: 25px; text-transform:uppercase;" required="required" autocomplete="off" id="B3" oninput="autotab(this, document.form.B4)" onkeydown="handleBackspace(event, this, document.form.B2)">
         <label for="B4"></label>
-        <input type="text" name="B4" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="B4" oninput="autotab(this, document.form.C1)" onkeydown="handleBackspace(event, this, document.form.B3)">
+        <input class="form" type="text" name="B4" maxlength="1" size="1" pattern="[A-Za-z]" style="font-size: 25px; text-transform:uppercase;" required="required" autocomplete="off" id="B4" oninput="autotab(this, document.form.C1)" onkeydown="handleBackspace(event, this, document.form.B3)">
         <br />
 
         <label for="C1"></label>
-        <input type="text" name="C1" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="C1" oninput="autotab(this, document.form.C2)" onkeydown="handleBackspace(event, this, document.form.B4)">
+        <input class="form" type="text" name="C1" maxlength="1" size="1" pattern="[A-Za-z]" style="font-size: 25px; text-transform:uppercase;" required="required" autocomplete="off" id="C1" oninput="autotab(this, document.form.C2)" onkeydown="handleBackspace(event, this, document.form.B4)">
         <label for="C2"></label>
-        <input type="text" name="C2" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="C2" oninput="autotab(this, document.form.C3)" onkeydown="handleBackspace(event, this, document.form.C1)">
+        <input class="form" type="text" name="C2" maxlength="1" size="1" pattern="[A-Za-z]" style="font-size: 25px; text-transform:uppercase;" required="required" autocomplete="off" id="C2" oninput="autotab(this, document.form.C3)" onkeydown="handleBackspace(event, this, document.form.C1)">
         <label for="C3"></label>
-        <input type="text" name="C3" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="C3" oninput="autotab(this, document.form.C4)" onkeydown="handleBackspace(event, this, document.form.C2)">
+        <input class="form" type="text" name="C3" maxlength="1" size="1" pattern="[A-Za-z]" style="font-size: 25px; text-transform:uppercase;" required="required" autocomplete="off" id="C3" oninput="autotab(this, document.form.C4)" onkeydown="handleBackspace(event, this, document.form.C2)">
         <label for="C4"></label>
-        <input type="text" name="C4" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="C4" oninput="autotab(this, document.form.D1)" onkeydown="handleBackspace(event, this, document.form.C3)">
+        <input class="form" type="text" name="C4" maxlength="1" size="1" pattern="[A-Za-z]" style="font-size: 25px; text-transform:uppercase;" required="required" autocomplete="off" id="C4" oninput="autotab(this, document.form.D1)" onkeydown="handleBackspace(event, this, document.form.C3)">
         <br />
 
         <label for="D1"></label>
-        <input type="text" name="D1" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="D1" oninput="autotab(this, document.form.D2)" onkeydown="handleBackspace(event, this, document.form.C4)">
+        <input class="form" type="text" name="D1" maxlength="1" size="1" pattern="[A-Za-z]" style="font-size: 25px; text-transform:uppercase;" required="required" autocomplete="off" id="D1" oninput="autotab(this, document.form.D2)" onkeydown="handleBackspace(event, this, document.form.C4)">
         <label for="D2"></label>
-        <input type="text" name="D2" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="D2" oninput="autotab(this, document.form.D3)" onkeydown="handleBackspace(event, this, document.form.D1)">
+        <input class="form" type="text" name="D2" maxlength="1" size="1" pattern="[A-Za-z]" style="font-size: 25px; text-transform:uppercase;" required="required" autocomplete="off" id="D2" oninput="autotab(this, document.form.D3)" onkeydown="handleBackspace(event, this, document.form.D1)">
         <label for="D3"></label>
-        <input type="text" name="D3" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="D3" oninput="autotab(this, document.form.D4)" onkeydown="handleBackspace(event, this, document.form.D2)">
+        <input class="form" type="text" name="D3" maxlength="1" size="1" pattern="[A-Za-z]" style="font-size: 25px; text-transform:uppercase;" required="required" autocomplete="off" id="D3" oninput="autotab(this, document.form.D4)" onkeydown="handleBackspace(event, this, document.form.D2)">
         <label for="D4"></label>
-        <input type="text" name="D4" maxlength="1" size="1" pattern="[A-Za-z]" required="required" autocomplete="off" id="D4" onkeydown="handleBackspace(event, this, document.form.D3)">
+        <input class="form" type="text" name="D4" maxlength="1" size="1" pattern="[A-Za-z]" style="font-size: 25px; text-transform:uppercase;" required="required" autocomplete="off" id="D4" onkeydown="handleBackspace(event, this, document.form.D3)">
         <br />
 
         <div class="button-div d-flex justify-content-center">
-          <input type="submit" value="Submit"/>
-          <input type="reset" value="RESET" style="color: red;"/>
+          <input class="button" type="submit" value="Submit"/>
+          <input class="button" type="reset" value="RESET" style="color: red;"/>
         </div>
       </form>
     </div>
+    <!-- <footer class="justify-content-center">
+      <a class="btn text-white" style="background-color: #333333;" href="#!" role="button">
+        <i class="fab fa-github"></i>
+      </a>
+    </footer> -->
   </body>
 </html>

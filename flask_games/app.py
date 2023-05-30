@@ -29,4 +29,4 @@ def operation_result():
     board = [[A1, A2, A3, A4], [B1, B2, B3, B4], [C1, C2, C3, C4], [D1, D2, D3, D4]]
 
     result = [x for x in sorted(set(solve(board)), key=len, reverse=True)]
-    return result, render_template('result.html')
+    return render_template('result.html', result = result)

@@ -1,16 +1,73 @@
+body {
+    background-color: #333333;
+}
+
+.navbar .custom-brand {
+    color: white;
+    font-size: 50px;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+}
+
 .d-flex {
     gap: 30px;
 }
 
 .navbar {
-    margin-bottom: 20px;
-    background-color: lightgray;
+    margin-bottom: 0;
+}
+
+div.stripe {
+    height: 10px;
+    background-color: #FFEBD0;
+    margin-bottom: 100px;
+}
+
+div.accent {
+    margin-top:20px;
+    color:forestgreen;
+    margin-bottom: 100px;
 }
 
 .button-div {
     margin-top: 20px;
 }
 
-input {
+input.form {
     margin-bottom: 5px;
+    line-height: 3em; 
+    width: 80px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #FFEBD0;
+    border-radius: 10px;
 }
+
+input.form:hover {
+    background-image: linear-gradient(rgb(0 0 0/40%) 0 0);
+}
+
+input.button {
+    border-radius: 10px;
+    line-height: 2em;
+    width: 100px;
+    font-weight: bold;
+}
+
+input.button:hover {
+    background-image: linear-gradient(rgb(0 0 0/40%) 0 0);
+}
+
+form {
+    margin-bottom: 250px;
+}
+
+/* footer {
+    background-color: #FFEBD0;
+    height: 66px;
+}
+
+a.btn {
+    height: 25px;
+    width: 50px;
+} */
