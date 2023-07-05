@@ -1,1 +1,1 @@
-web: gunicorn flask_games/app:app
+web: gunicorn app:app -chdir App
