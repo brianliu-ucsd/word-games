@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def index():
-    return render_template('flask_games/templates/base.html')
+    return render_template('flask_games/base.html')
 
 @app.route('/operation_result/', methods=['POST'])
 def operation_result():
@@ -29,4 +29,4 @@ def operation_result():
     board = [[A1, A2, A3, A4], [B1, B2, B3, B4], [C1, C2, C3, C4], [D1, D2, D3, D4]]
 
     result = [x for x in sorted(set(DFS.solve(board)), key=len, reverse=True)]
-    return render_template('flask_games/templates/result.html', result = result)
+    return render_template('flask_games/result.html', result = result)
