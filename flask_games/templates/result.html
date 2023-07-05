@@ -19,15 +19,12 @@
       </button>
     </nav>
     <div class="stripe"></div>
-    <div class="form-div d-flex justify-content-center">
+    <li class="d-flex justify-content-center">
       {% for word in result %}
-      <div>
-        <tr>
-          <th> {{word}} </th>
-        </tr>
-        {% endfor %}
+      <div class="word">
+        <div class="word-text">{{word}}</div>
+      {% endfor %}
       </div>
-    </div>
-    </div>
+    </li>
   </body>
 </html>
