@@ -1,9 +1,9 @@
-from createTrie import get_dictionary
-from trie import Trie
+from flask_games import createTrie
+from flask_games import trie
 
 def solve(grid: list[list[str]]) -> dict[str: list[tuple[int, int]]]:
     words = []
-    dictionary = get_dictionary()
+    dictionary = createTrie.get_dictionary()
     BOARD_DIMENSION = 4
     for i in range(BOARD_DIMENSION):
         for j in range(BOARD_DIMENSION):
@@ -28,7 +28,7 @@ def traverse(
     word: str,
     # order: list[tuple[int, int]],
     words: list[str],
-    dictionary: Trie,
+    dictionary: trie.Trie,
 ):  
     char = grid[i][j]
     word += char

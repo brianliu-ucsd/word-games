@@ -1,8 +1,8 @@
-from trie import Trie
+from flask_games import trie
 import json
 
-def get_dictionary() -> Trie:
-    dictionary = Trie()
+def get_dictionary() -> trie.Trie:
+    dictionary = trie.Trie()
     # f = open('words_dictionary.json')
     # data = json.load(f)
     # for word in data.keys():

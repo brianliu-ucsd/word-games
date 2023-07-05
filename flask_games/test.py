@@ -1,5 +1,5 @@
-from DFS import solve
+from flask_games import DFS
 
 board = [["l", "e", "o", "n"], ["a", "r", "d", "o"], ["n", "g", "u", "y"], ["e", "n", "l", "l"]]
 
-print(solve(board))
+print(DFS.solve(board))
