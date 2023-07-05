@@ -8,7 +8,7 @@ def get_dictionary() -> trie.Trie:
     # for word in data.keys():
     #     word = word.strip()
     #     dictionary.insert(word)
-    f = open('dictionary.json')
+    f = open('flask_games/dictionary.json')
     data = json.load(f)
     for word in data:
         word = word.strip()
